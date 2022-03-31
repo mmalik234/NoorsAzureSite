@@ -120,6 +120,25 @@ app.get('/batman', (request, response) => {
 	response.send(JSON.stringify(spiderMan, null, 4))
 })
 
+var MahnoorMalik = {
+	"firstName":"Mahnoor",
+	"lastName":"Malik",
+	"preferredName":"Noor",
+	"email":"mahnoorfmalik@lewisu.edu",
+	"class":"CPSC-24500-001",
+	"room":"AS-104-A",
+	"startTime":"2 PM CT",
+	"seatNumber":"",
+	"virtual":[
+		"Friday"
+	]
+}
+	app.get('/mypersonalinfo', (request, response) => {
+		console.log('Calling "/mypersonalinfo" on the Node.js server.')
+		response.type('application/json')
+		response.send(JSON.stringify(MahnoorMalik, null, 4))
+	})
+
 // Custom 404 page.
 app.use((request, response) => {
   response.type('text/plain')
