@@ -133,8 +133,8 @@ var MahnoorMalik = {
 		"Friday"
 	]
 }
-	app.get('/mypersonalinfo', (request, response) => {
-		console.log('Calling "/mypersonalinfo" on the Node.js server.')
+	app.get('personalinfo', (request, response) => {
+		console.log('Calling "/personalinfo" on the Node.js server.')
 		response.type('application/json')
 		response.send(JSON.stringify(MahnoorMalik, null, 4))
 	})
